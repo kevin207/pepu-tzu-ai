@@ -1,0 +1,27 @@
+services:
+    tee:
+        command:
+            [
+                "pnpm",
+                "start",
+                "--character=./characters/pepu-tzu.character.json",
+            ]
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: librixai:latest
+        container_name: librixai
+        stdin_open: true
+        tty: true
+        volumes:
+            - /var/run/tappd.sock:/var/run/tappd.sock
+            - tee:/app/packages/client-twitter/src/tweetcache
+            - tee:/app/db.sqlite
+        env_file:
+            - .env
+        ports:
+            - "3000:80"
+        restart: always
+
+volumes:
+    tee:

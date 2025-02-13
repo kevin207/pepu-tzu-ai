@@ -1,0 +1,59 @@
+node_modules
+/out
+
+.env
+.env.production
+.env.ougridtest
+.env.*.local
+.env.local
+concatenated-output.ts
+embedding-cache.json
+packages/plugin-buttplug/intiface-engine
+
+.DS_Store
+
+dist/pnpm build
+# Allow models directory but ignore model files
+models/*.gguf
+
+cookies.json
+
+db.sqlite
+searches/
+tweets/
+
+*.gguf
+*.onnx
+*.wav
+*.mp3
+
+logs/
+
+test-report.json
+content_cache/
+test_data/
+tokencache/
+tweetcache/
+twitter_cookies.json
+timeline_cache.json
+
+*.sqlite
+
+# characters/
+
+packages/core/src/providers/cache
+packages/core/src/providers/cache/*
+cache/*
+packages/plugin-coinbase/src/plugins/transactions.csv
+packages/plugin-coinbase/package-lock.json
+packages/plugin-node/node-compile-cache
+tsup.config.bundled_*.mjs
+
+# Ignore the compiled files
+packages/**/dist/**
+
+.turbo
+
+# PM2 Configuration
+ecosystem.config.js
+.codegpt
