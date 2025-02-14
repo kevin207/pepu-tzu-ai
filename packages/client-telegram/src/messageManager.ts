@@ -322,6 +322,7 @@ export class MessageManager {
         ) {
             return;
         }
+
         if (
             this.runtime.character.clientConfig?.telegram
                 ?.shouldIgnoreDirectMessages &&
@@ -418,9 +419,9 @@ export class MessageManager {
             state = await this.runtime.updateRecentMessageState(state);
 
             // Decide whether to respond
-            const shouldRespond = await this._shouldRespond(message, state);
+            // const shouldRespond = await this._shouldRespond(message, state);
 
-            if (shouldRespond) {
+            if (true) {
                 // Generate response
                 const context = composeContext({
                     state,
@@ -501,7 +502,7 @@ export class MessageManager {
                 );
             }
 
-            await this.runtime.evaluate(memory, state, shouldRespond);
+            await this.runtime.evaluate(memory, state, true);
         } catch (error) {
             elizaLogger.error("❌ Error handling message:", error);
             elizaLogger.error("Error sending message:", error);

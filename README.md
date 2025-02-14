@@ -5,9 +5,9 @@
 </div>
 
 <div align="center">
-  
+
   📖 [Documentation](https://ai16z.github.io/eliza/) | 🎯 [Examples](https://github.com/thejoven/awesome-eliza)
-  
+
 </div>
 
 ## 🌍 README Translations

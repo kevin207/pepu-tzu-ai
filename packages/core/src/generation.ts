@@ -332,10 +332,6 @@ export async function generateText({
                         maxTokens: max_response_length,
                         frequencyPenalty: frequency_penalty,
                         presencePenalty: presence_penalty,
-                        provider:{
-                            order: ["Fireworks"],
-                            allow_fallbacks: false
-                        }
                     });
 
                 response = openrouterResponse;
