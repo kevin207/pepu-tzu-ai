@@ -417,6 +417,7 @@ export class MessageManager {
 
             // Decide whether to respond
             const shouldRespond = await this._shouldRespond(message, state);
+            // const shouldRespond = true;
 
             if (shouldRespond) {
                 // Generate response

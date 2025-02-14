@@ -52,30 +52,30 @@ export class TelegramClient {
 
         this.bot.on("message", async (ctx) => {
             try {
-                if (this.tgTrader) {
-                    const userId = ctx.from?.id.toString();
-                    const username =
-                        ctx.from?.username || ctx.from?.first_name || "Unknown";
-                    if (!userId) {
-                        elizaLogger.warn(
-                            "Received message from a user without an ID."
-                        );
-                        return;
-                    }
-                    try {
-                        await getOrCreateRecommenderInBe(
-                            userId,
-                            username,
-                            this.backendToken,
-                            this.backend
-                        );
-                    } catch (error) {
-                        elizaLogger.error(
-                            "Error getting or creating recommender in backend",
-                            error
-                        );
-                    }
-                }
+                // if (this.tgTrader) {
+                //     const userId = ctx.from?.id.toString();
+                //     const username =
+                //         ctx.from?.username || ctx.from?.first_name || "Unknown";
+                //     if (!userId) {
+                //         elizaLogger.warn(
+                //             "Received message from a user without an ID."
+                //         );
+                //         return;
+                //     }
+                //     try {
+                //         await getOrCreateRecommenderInBe(
+                //             userId,
+                //             username,
+                //             this.backendToken,
+                //             this.backend
+                //         );
+                //     } catch (error) {
+                //         elizaLogger.error(
+                //             "Error getting or creating recommender in backend",
+                //             error
+                //         );
+                //     }
+                // }
                 await this.messageManager.handleMessage(ctx);
             } catch (error) {
                 elizaLogger.error("❌ Error handling message:", error);
