@@ -419,9 +419,9 @@ export class MessageManager {
             state = await this.runtime.updateRecentMessageState(state);
 
             // Decide whether to respond
-            // const shouldRespond = await this._shouldRespond(message, state);
+            const shouldRespond = await this._shouldRespond(message, state);
 
-            if (true) {
+            if (shouldRespond) {
                 // Generate response
                 const context = composeContext({
                     state,
@@ -502,7 +502,7 @@ export class MessageManager {
                 );
             }
 
-            await this.runtime.evaluate(memory, state, true);
+            await this.runtime.evaluate(memory, state, shouldRespond);
         } catch (error) {
             elizaLogger.error("❌ Error handling message:", error);
             elizaLogger.error("Error sending message:", error);
