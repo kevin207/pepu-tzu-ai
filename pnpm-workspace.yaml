@@ -4,3 +4,8 @@ packages:
     - "client"
     - "web-agent"
     - "agent"
+
+packageManager: "pnpm@9"
+shared-workspace-lockfile: true
+link-workspace-packages: true
+hoist: false
