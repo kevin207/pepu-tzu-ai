@@ -51,8 +51,8 @@ export const TwitterClientInterface: Client = {
 
         await manager.interaction.start();
 
-        manager.search = new TwitterSearchClient(manager.client, runtime);
-        await manager.search.start();
+        // manager.search = new TwitterSearchClient(manager.client, runtime);
+        // await manager.search.start();
 
         return manager;
     },

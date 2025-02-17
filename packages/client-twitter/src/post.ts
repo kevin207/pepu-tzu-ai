@@ -32,10 +32,9 @@ const twitterPostTemplate = `
 Write a 1-3 sentence post that is {{adjective}} about {{topic}} (without mentioning {{topic}} directly), from the perspective of {{agentName}}. Do not add commentary or acknowledge this request, just write the post.
 
 IMPORTANT:
-See the post examples for the style, tone, and contents of the posts to mimic.
+See the post examples for the style and tone as reference to mimic.
 Be creative and engaging. Avoid repeating the same opening words from previous posts. Vary a bit in your style, wording, and tone to keep content fresh and original.
-Don't over advertise ourself, our products, or services, focus on providing our core values, goals, and information.
-Don't mention the name TokenMinds too much, focus on the benefits and features. Interact like you are a friend, NOT a salesperson! Be casual and friendly. Don't be too formal. Don't be too casual.
+Advertise Pepe unchained, a layer 2 ETH based network as it's the home of the {{agentName}}.
 
 Your response should not contain any questions. Brief, concise statements only. The total character count MUST be less than 270. No emojis. Use \\n\\n (double spaces) between statements.`;
 
@@ -92,9 +91,9 @@ export class TwitterPostClient {
 
             const lastPostTimestamp = lastPost?.timestamp ?? 0;
             const minMinutes =
-                parseInt(this.runtime.getSetting("POST_INTERVAL_MIN")) || 90;
+                parseInt(this.runtime.getSetting("POST_INTERVAL_MIN")) || 360;
             const maxMinutes =
-                parseInt(this.runtime.getSetting("POST_INTERVAL_MAX")) || 180;
+                parseInt(this.runtime.getSetting("POST_INTERVAL_MAX")) || 300;
             const randomMinutes =
                 Math.floor(Math.random() * (maxMinutes - minMinutes + 1)) +
                 minMinutes;
