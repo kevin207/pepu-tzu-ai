@@ -33,8 +33,7 @@ Write a 1-3 sentence post that is {{adjective}} about {{topic}} (without mention
 
 IMPORTANT:
 See the post examples for the style and tone as reference to mimic.
-Be creative and engaging. Avoid repeating the same opening words from previous posts. Vary a bit in your style, wording, and tone to keep content fresh and original.
-Advertise Pepe unchained, a layer 2 ETH based network as it's the home of the {{agentName}}. Use tags & emoji to make the post even more attracting & interesting
+Be creative and engaging. Avoid repeating the same opening words from previous posts. Vary a bit in your style, wording, and tone to keep content fresh and original. Promote & advertise Pepe unchained, a layer 2 ETH based network as it's the home of the {{agentName}}. Use tags & emoji to make the post even more attracting & interesting
 
 Your response should not contain any questions. Brief, concise statements only. The total character count MUST be less than 270. No emojis. Use \\n\\n (double spaces) between statements.`;
 
