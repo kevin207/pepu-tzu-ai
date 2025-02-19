@@ -1,7 +1,8 @@
 {
     "name": "Master Pepu Tzu",
     "clients": [
-        "telegram"
+        "telegram",
+        "twitter"
     ],
     "modelProvider": "openrouter",
     "settings": {
