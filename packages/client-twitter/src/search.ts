@@ -33,12 +33,7 @@ About {{agentName}} (@{{twitterUserName}}):
 
 # Task: Respond to the following post in the style and perspective of {{agentName}} (aka @{{twitterUserName}}). Write a {{adjective}} response for {{agentName}} to say directly in response to the post. don't generalize.
 
-Feel free to share your thoughts, opinions, advice or open a discussion, as these are more engaging than just stating facts.
-Be creative and engaging. Avoid repeating the same opening words from previous interactions that you've made. Vary in your style, wording, content, and tone to keep content fresh, interesting, and engaging.
-Don't over advertise ourselves, our products, or services, sneakily providing our core values, goals, and information in a normal, human-like Twitter interaction.
-Don't mention the name ToknMinds too much, focus on the benefits and features.
-Interact like you are a friend, NOT a salesperson! Be casual and friendly. Don't be too formal. Don't be too casual.
-You can refer to yourself as "I" or "me" and the user as "you" or "your", but you don't have to.
+Feel free to share your thoughts, opinions, advice or open a discussion, as these are more engaging than just stating facts. Be creative and engaging. Avoid repeating the same opening words from previous interactions that you've made. Vary in your style, wording, content, and tone to keep content fresh, interesting, and engaging. Don't over advertise ourselves, our products, or services, sneakily providing our core values, goals, and information in a normal, human-like Twitter interaction. Interact like you are a wise teacher.You can refer to yourself as "I" or "me" and the user as "you" or "your", but you don't have to.
 
 {{currentPost}}
 
@@ -123,11 +118,11 @@ export class TwitterSearchClient {
             elizaLogger.log("Executing search loop...");
             this.engageWithSearchTerms();
             const waitTime =
-                // (Math.floor(Math.random() * (10 - 5 + 1)) + 5) * 60 * 1000; // 5-10 minutes
-                (Math.floor(Math.random() * (30 - 15 + 1)) + 5) * 60 * 1000; // 15-30 minutes
             // (Math.floor(Math.random() * (10 - 5 + 1)) + 5) * 60 * 1000; // 5-10 minutes
-            // (Math.floor(Math.random() * (120 - 60 + 1)) + 60) * 60 * 1000; // 60-120 minutes
-            // (Math.floor(Math.random() * (90 - 60 + 1)) + 60) * 60 * 1000; // 60-90 minutes
+            // (Math.floor(Math.random() * (30 - 15 + 1)) + 5) * 60 * 1000; // 15-30 minutes
+            // (Math.floor(Math.random() * (10 - 5 + 1)) + 5) * 60 * 1000; // 5-10 minutes
+            (Math.floor(Math.random() * (240 - 180 + 1)) + 180) * 60 * 1000; // 180-240 minutes
+
             elizaLogger.log(
                 `Next search will be in ${waitTime / 1000 / 60} minutes.`
             );
@@ -146,7 +141,7 @@ export class TwitterSearchClient {
             // Make searchTerm from randomly selected 4 topics from the character topics list all fours as a string in this format: "(<item1> OR <item2> OR <item3> OR <item4>)"
             const searchTerm = [...this.runtime.character.topics]
                 .sort(() => Math.random() - 0.5)
-                .slice(0, 4)
+                .slice(0, 5)
                 .map((topic) => `(${topic})`)
                 .join(" OR ")
                 .replace(/^(.*)$/, "($1)");
